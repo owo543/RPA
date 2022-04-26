@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="728,701.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:p2="http://schemas.uipath.com/workflow/activities/intelligentocr/classification" xmlns:p3="http://schemas.uipath.com/workflow/activities/document-processing-contracts/classification" xmlns:p4="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:p5="http://schemas.uipath.com/workflow/activities/document-processing-contracts/taxonomy" xmlns:p6="http://schemas.uipath.com/workflow/activities/document-processing-contracts/results" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="728,701.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:p2="http://schemas.uipath.com/workflow/activities/intelligentocr/classification" xmlns:p3="http://schemas.uipath.com/workflow/activities/document-processing-contracts/classification" xmlns:p4="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:p5="http://schemas.uipath.com/workflow/activities/document-processing-contracts/taxonomy" xmlns:p6="http://schemas.uipath.com/workflow/activities/document-processing-contracts/results" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="80">
       <x:String>System.Activities</x:String>
@@ -117,7 +117,7 @@
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">200,245.7</av:Point>
               <av:Size x:Key="ShapeSize">200,68</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">300,313.7 300,363.7</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">300,313.7 300,343.7 298.838333333333,343.7 298.838333333333,363.7</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <p:DigitizeDocument DegreeOfParallelism="-1" DisplayName="Digitize Document" DocumentObjectModel="[Dom]" DocumentPath="[DocPath]" DocumentText="[DocText]" ForceApplyOCR="False" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="DigitizeDocument_1">
@@ -139,68 +139,77 @@
             <FlowStep x:Name="__ReferenceID1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">200,363.7</av:Point>
-                  <av:Size x:Key="ShapeSize">200,52</av:Size>
+                  <av:Point x:Key="ShapeLocation">183.638333333333,363.7</av:Point>
+                  <av:Size x:Key="ShapeSize">230.4,61.6</av:Size>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:CommentOut sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-                <ui:CommentOut.Body>
-                  <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_1">
-                    <p2:ClassifyDocumentScope ClassificationResults="[autoClassification]" DisplayName="Classify Document Scope" DocumentObjectModel="[Dom]" DocumentPath="[DocPath]" DocumentText="[DocText]" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="ClassifyDocumentScope_1" Taxonomy="[Taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{},&quot;ClassifierMinimumConfidence&quot;:{},&quot;DocumentTypesByPersistenceId&quot;:{&quot;UIaa3565d08843445f94603ccf028a408e&quot;:[]}}">
-                      <p2:ClassifyDocumentScope.Classifiers>
-                        <p2:KeywordBasedClassifier HumanValidatedData="{x:Null}" LearningData="{x:Null}" DisplayName="Keyword Based Classifier" sap:VirtualizedContainerService.HintSize="233.6,114.4" sap2010:WorkflowViewState.IdRef="KeywordBasedClassifier_1" LearningFilePath="keyword.json" PersistenceId="UIaa3565d08843445f94603ccf028a408e">
-                          <p2:KeywordBasedClassifier.ClassifierResult>
-                            <OutArgument x:TypeArguments="p3:ClassifierResult">
-                              <DelegateArgumentReference x:TypeArguments="p3:ClassifierResult">
-                                <DelegateOutArgument x:TypeArguments="p3:ClassifierResult" Name="ClassificationResult" />
-                              </DelegateArgumentReference>
-                            </OutArgument>
-                          </p2:KeywordBasedClassifier.ClassifierResult>
-                          <p2:KeywordBasedClassifier.DocumentObjectModel>
-                            <InArgument x:TypeArguments="p4:Document">
-                              <DelegateArgumentValue x:TypeArguments="p4:Document">
-                                <DelegateInArgument x:TypeArguments="p4:Document" Name="DocumentObjectModel" />
-                              </DelegateArgumentValue>
-                            </InArgument>
-                          </p2:KeywordBasedClassifier.DocumentObjectModel>
-                          <p2:KeywordBasedClassifier.DocumentPath>
-                            <InArgument x:TypeArguments="x:String">
-                              <DelegateArgumentValue x:TypeArguments="x:String">
-                                <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
-                              </DelegateArgumentValue>
-                            </InArgument>
-                          </p2:KeywordBasedClassifier.DocumentPath>
-                          <p2:KeywordBasedClassifier.DocumentText>
-                            <InArgument x:TypeArguments="x:String">
-                              <DelegateArgumentValue x:TypeArguments="x:String">
-                                <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
-                              </DelegateArgumentValue>
-                            </InArgument>
-                          </p2:KeywordBasedClassifier.DocumentText>
-                          <p2:KeywordBasedClassifier.DocumentTypes>
-                            <InArgument x:TypeArguments="p3:ClassifierDocumentType[]">
-                              <DelegateArgumentValue x:TypeArguments="p3:ClassifierDocumentType[]">
-                                <DelegateInArgument x:TypeArguments="p3:ClassifierDocumentType[]" Name="DocumentTypes" />
-                              </DelegateArgumentValue>
-                            </InArgument>
-                          </p2:KeywordBasedClassifier.DocumentTypes>
-                        </p2:KeywordBasedClassifier>
-                      </p2:ClassifyDocumentScope.Classifiers>
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </p2:ClassifyDocumentScope>
-                  </Sequence>
-                </ui:CommentOut.Body>
-              </ui:CommentOut>
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230.4,61.6" sap2010:WorkflowViewState.IdRef="WriteLine_1">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </WriteLine>
             </FlowStep>
           </FlowStep.Next>
         </FlowStep>
       </FlowStep.Next>
     </FlowStep>
     <x:Reference>__ReferenceID0</x:Reference>
+    <FlowStep>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">160,486</av:Point>
+          <av:Size x:Key="ShapeSize">200,68</av:Size>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <p2:ClassifyDocumentScope ClassificationResults="[autoClassification]" DisplayName="Classify Document Scope" DocumentObjectModel="[Dom]" DocumentPath="[DocPath]" DocumentText="[DocText]" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="ClassifyDocumentScope_1" Taxonomy="[Taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{},&quot;ClassifierMinimumConfidence&quot;:{},&quot;DocumentTypesByPersistenceId&quot;:{&quot;UIaa3565d08843445f94603ccf028a408e&quot;:[]}}">
+        <p2:ClassifyDocumentScope.Classifiers>
+          <p2:KeywordBasedClassifier HumanValidatedData="{x:Null}" LearningData="{x:Null}" DisplayName="Keyword Based Classifier" sap:VirtualizedContainerService.HintSize="233.6,114.4" sap2010:WorkflowViewState.IdRef="KeywordBasedClassifier_1" LearningFilePath="keyword.json" PersistenceId="UIaa3565d08843445f94603ccf028a408e">
+            <p2:KeywordBasedClassifier.ClassifierResult>
+              <OutArgument x:TypeArguments="p3:ClassifierResult">
+                <DelegateArgumentReference x:TypeArguments="p3:ClassifierResult">
+                  <DelegateOutArgument x:TypeArguments="p3:ClassifierResult" Name="ClassificationResult" />
+                </DelegateArgumentReference>
+              </OutArgument>
+            </p2:KeywordBasedClassifier.ClassifierResult>
+            <p2:KeywordBasedClassifier.DocumentObjectModel>
+              <InArgument x:TypeArguments="p4:Document">
+                <DelegateArgumentValue x:TypeArguments="p4:Document">
+                  <DelegateInArgument x:TypeArguments="p4:Document" Name="DocumentObjectModel" />
+                </DelegateArgumentValue>
+              </InArgument>
+            </p2:KeywordBasedClassifier.DocumentObjectModel>
+            <p2:KeywordBasedClassifier.DocumentPath>
+              <InArgument x:TypeArguments="x:String">
+                <DelegateArgumentValue x:TypeArguments="x:String">
+                  <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
+                </DelegateArgumentValue>
+              </InArgument>
+            </p2:KeywordBasedClassifier.DocumentPath>
+            <p2:KeywordBasedClassifier.DocumentText>
+              <InArgument x:TypeArguments="x:String">
+                <DelegateArgumentValue x:TypeArguments="x:String">
+                  <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
+                </DelegateArgumentValue>
+              </InArgument>
+            </p2:KeywordBasedClassifier.DocumentText>
+            <p2:KeywordBasedClassifier.DocumentTypes>
+              <InArgument x:TypeArguments="p3:ClassifierDocumentType[]">
+                <DelegateArgumentValue x:TypeArguments="p3:ClassifierDocumentType[]">
+                  <DelegateInArgument x:TypeArguments="p3:ClassifierDocumentType[]" Name="DocumentTypes" />
+                </DelegateArgumentValue>
+              </InArgument>
+            </p2:KeywordBasedClassifier.DocumentTypes>
+          </p2:KeywordBasedClassifier>
+        </p2:ClassifyDocumentScope.Classifiers>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </p2:ClassifyDocumentScope>
+    </FlowStep>
     <x:Reference>__ReferenceID1</x:Reference>
   </Flowchart>
 </Activity>
